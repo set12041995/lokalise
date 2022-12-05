@@ -1,0 +1,9 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+@use "mixins" as *;
+
+.work {
+    @include job-item;
+    flex-direction: row-reverse;
+}
+ 

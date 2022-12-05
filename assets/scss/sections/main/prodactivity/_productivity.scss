@@ -1,0 +1,31 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.productivity {
+    padding-top: 154px;
+    padding-bottom: 154px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 90px;
+
+        @include md {
+            font-size: 35px;    
+        }
+    }
+    
+    &__content {
+        @include md-min {
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        @include md {
+            flex-wrap: wrap;
+            text-align: center;
+        }
+    }
+}

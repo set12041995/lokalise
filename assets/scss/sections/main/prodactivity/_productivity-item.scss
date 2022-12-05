@@ -1,0 +1,60 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.productivity-item {
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+        padding-bottom: 30px;    
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.33;
+        margin-top: 60px;
+
+        @include md {
+            margin-top: 40px;
+            font-size: 22px;    
+        }
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+        padding-right: 30px;
+        margin-top: 35px;
+        margin-bottom: 25px;
+
+        @include md {
+            margin-top: 10px;
+            padding-right: 0;
+            font-size: 18px;    
+        }
+    }
+
+    &__button {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+
+        @include md {
+            font-size: 18px;    
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+
+    &__pictures {
+        order: -1;
+    }
+    
+    &__image {
+        height: 200px;
+    }
+}

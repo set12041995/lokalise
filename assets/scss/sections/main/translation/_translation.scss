@@ -1,0 +1,41 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.translation {
+    background-color: #DABC98;
+    &__content {
+        display: flex;
+        gap: 70px;
+        padding: 70px 0;
+        align-items: center;
+
+        @include lg {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 1.43;
+    
+    }
+    &__picture {
+        order: -1;
+    }
+ 
+    &__icon {
+        display: flex;
+        max-height: 116px;
+        padding: 0 65px;
+
+        @include lg-min {
+            border-left: 1px solid black;
+            gap:70px;
+        }
+        @include lg {
+            gap:30px;
+        }
+    }
+}

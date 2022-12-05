@@ -1,0 +1,38 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.opportunities {
+    background-color: $color-bg-light;
+    padding-top: 120px;
+    padding-bottom: 127px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 1.2;
+        text-align: center;
+        margin: 0 0 80px;
+
+        @include md {
+            font-size: 35px;    
+        }
+      }
+    
+    &__content {
+        display: grid;
+        gap: 78px 110px;
+    
+        @include xl-min {
+        grid-template-columns: repeat(3, 1fr);
+        }
+        @include xl-md {
+        grid-template-columns: repeat(2, 1fr);
+        }
+        @include md {
+            gap: 40px 110px;
+        }
+        @include sm-min {
+        padding: 0 40px;
+        }
+    }
+}

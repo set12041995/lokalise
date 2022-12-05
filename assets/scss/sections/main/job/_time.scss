@@ -1,0 +1,9 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+@use "mixins" as *;
+
+.time {
+    @include job-item;
+    flex-direction: row-reverse;
+}
+ 

@@ -1,0 +1,97 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+
+  @mixin job-item {
+    display: flex;
+    margin-bottom: 150px;
+
+    @include xl-min {
+        gap: 138px;
+    }
+    @include xl-lg {
+        gap: 60px;
+    }
+    @include lg {
+        gap: 30px;
+    }
+
+    @include md {
+        flex-direction: column;
+    }
+
+  &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-basis: 0;
+      flex-grow: 1;
+
+      @include xl-min {
+        gap: $gap-md;
+    }
+
+
+  }
+
+  &__title {
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0;
+
+      @include lg-min {
+        font-size: 50px;
+    }
+
+      @include lg-md {
+        font-size: 40px;
+    }
+
+      @include md {
+        font-size: 30px;
+    }
+  }
+
+  &__description {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.5;
+
+      @include lg-min {
+        font-size: 20px;
+    }
+
+      @include lg {
+        font-size: 18px;
+    }
+  }
+
+  &__button {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.5;
+  }
+
+  &__picture {
+    @include xl-min {
+        flex-basis: 632px;
+      }
+      @include xl {
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+  }
+
+  &__image {      
+      @include md-min {
+        width: 100%;
+      }
+      @include md-sm {
+        width: 95%;
+      }
+
+      @include sm {
+        width: 90%;
+      }
+  }
+}

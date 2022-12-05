@@ -1,0 +1,98 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.container {
+    width: min(100% - 40px, 1290px);
+    margin-inline: auto;
+}
+
+.btn {
+    min-width: 120px;
+    min-height: 45px;
+    border-width: 1px;
+    border-style: solid;
+    font-weight: 600;
+    font-size: 16px;
+
+    &--light {
+        background-color: $color-white;
+        border-color: rgba($color-black, 0.5);
+    }
+
+    &--accent {
+        background-color: $color-accent;
+        border-color: $color-accent;
+    }
+
+    &--sm {
+        min-width: 120px;
+        @include lg-min {
+            min-height: 45px;
+        }
+        @include lg {
+            min-height: 40px;
+        }
+    }
+
+    &--md {
+        @include lg-min {
+            min-width: 160px;
+            min-height: 60px;
+        }
+        @include lg-xs {
+            min-width: 160px;
+            min-height: 50px;
+        }
+        @include xs {
+            min-width: 140px;
+            min-height: 45px;
+        }
+    }
+}
+
+.integration {
+    &__button {
+        min-width: 193px;
+        min-height: 60px;
+        border-width: 1px;
+        border-style: solid;
+        font-weight: 600;
+        font-size: 16px;
+        background-color: $color-accent;
+        border-color: $color-accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 32px 0 0;
+    }
+    &__button-item {
+        color: $color-white;
+        padding: 15px 30px;
+    }
+}
+
+.localization {
+    &__button {
+        background-color: $color-black;
+        border-color: $color-black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-width: 1px;
+        border-style: solid;
+        font-weight: 600;
+        font-size: 16px;
+        min-width: 160px;
+        min-height: 60px;
+    }
+    &__button-link {
+        color: $color-white;
+        font-weight: 600;
+        padding: 19px 30px;
+
+    }
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}

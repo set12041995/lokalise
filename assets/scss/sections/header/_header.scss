@@ -1,0 +1,12 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header {
+    min-height: 100vh;
+    background-color: $color-white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+

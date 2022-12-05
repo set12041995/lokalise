@@ -1,0 +1,38 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.localization {
+    background-color: $color-accent-light;
+    padding: 161px 0 161px;
+
+    @include md {
+        padding: 70px 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+    }
+    &__title {
+        font-weight: 600;
+        line-height: 1.15;
+        max-width: 800px;
+        margin:0 0;
+
+        @include md-min {
+            font-size: 65px;
+        }
+        @include md {
+            font-size: 40px;
+        }
+    }
+    &__description {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+        margin: 29px 0 54px;
+    }
+
+}
